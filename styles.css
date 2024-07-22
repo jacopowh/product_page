@@ -1,0 +1,177 @@
+:root {
+    --primary-color: #0077b6;
+    --secondary-color: #00b4d8;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --light-gray: #e9ecef;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 1em 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.btn-login {
+    background-color: var(--secondary-color);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #0096c7;
+}
+
+main {
+    padding: 2em 0;
+}
+
+.product-title {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.product-title h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.product-title .code {
+    font-size: 1.2em;
+    color: #6c757d;
+    margin-top: 0.5em;
+}
+
+.top-needs {
+    list-style: none;
+    padding: 0;
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.top-needs li {
+    background: var(--light-gray);
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.key-statistics {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+    margin-bottom: 2em;
+}
+
+.statistic {
+    background: #fff;
+    padding: 2em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    flex: 1;
+    max-width: calc(50% - 1em); /* Assicura che ogni statistica occupi al massimo metà dello spazio disponibile */
+}
+
+.statistic h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-size: 1.5em;
+}
+
+.chart-container {
+    position: relative;
+    height: 300px; /* Altezza fissa per il contenitore del grafico */
+    width: 100%;
+}
+
+
+canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+footer {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 2em 0;
+}
+
+footer nav ul {
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contacts {
+    text-align: center;
+}
+
+.contacts p {
+    margin: 0.5em 0;
+}
+
+.social {
+    margin-top: 1em;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .key-statistics {
+        flex-direction: column;
+    }
+
+    .statistic {
+        max-width: 100%;
+    }
+}

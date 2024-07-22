@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fondo XYZ - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Logo</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Prodotti</a></li>
+                    <li><a href="#">Contatti</a></li>
+                    <li><a href="#" class="btn-login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="product-title">
+                <h1>Fondo XYZ</h1>
+                <p class="code">Codice Unico: 123456789</p>
+                <ul class="top-needs">
+                    <li>Bisogno 1</li>
+                    <li>Bisogno 2</li>
+                    <li>Bisogno 3</li>
+                </ul>
+            </section>
+
+            <section class="key-statistics">
+                <div class="statistic">
+                    <h2>Indice di Costo Sintetico</h2>
+                    <div class="chart-container">
+                        <canvas id="cost_chart"></canvas>
+                    </div>
+                </div>
+                <div class="statistic">
+                    <h2>Indice di Rischio Sintetico</h2>
+                    <div class="chart-container">
+                        <canvas id="risk_chart"></canvas>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Informazioni legali</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Termini e condizioni</a></li>
+                </ul>
+            </nav>
+            <div class="contacts">
+                <p>Email: info@example.com</p>
+                <p>Telefono: 123-456-7890</p>
+                <p>Indirizzo: Via Roma 123, 00100 Roma, Italia</p>
+            </div>
+            <div class="social">
+                <!-- Aggiungi qui le icone dei social media -->
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
