@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Grafici per le statistiche chiave
     const costCtx = document.getElementById('cost_chart').getContext('2d');
     const riskCtx = document.getElementById('risk_chart').getContext('2d');
 
@@ -84,4 +85,52 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+    // Animazione delle barre dei bisogni
+    function animateNeedBars() {
+        const needBars = document.querySelectorAll('.need-bar');
+        needBars.forEach(bar => {
+            const value = bar.getAttribute('data-value');
+            setTimeout(() => {
+                bar.style.width = `${value}%`;
+            }, 100);
+        });
+    }
+
+    // Animazione delle barre dei bisogni e Value for Money
+    function animateBars() {
+        const bars = document.querySelectorAll('.need-bar, .vfm-bar');
+        bars.forEach(bar => {
+            const value = bar.getAttribute('data-value');
+            setTimeout(() => {
+                bar.style.width = `${value}%`;
+            }, 100);
+        });
+    }
+
+    // Funzione per verificare se un elemento è nel viewport
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // Animazione al scroll
+    function handleScroll() {
+        const cardsContainer = document.querySelector('.cards-container');
+        if (isInViewport(cardsContainer)) {
+            animateBars();
+            window.removeEventListener('scroll', handleScroll);
+        }
+    }
+
+    // Inizializza l'animazione delle barre
+    animateBars();
+
+    // Aggiungi l'event listener per lo scroll
+    window.addEventListener('scroll', handleScroll);
 });
