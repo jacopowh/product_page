@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fondo XYZ - Dashboard</title>
+    <title>Fondo XYZ</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
@@ -49,86 +48,113 @@
                     </div>
                 </div>
             </section>
-        <div class="cards-container">
-            <section class="top-needs-card">
-                <h2>Top Bisogni</h2>
-                <div class="needs-list">
-                    <div class="need">
-                        <span class="need-name">Crescita del Capitale</span>
-                        <div class="need-bar-container">
-                            <div class="need-bar" data-value="75"></div>
-                        </div>
-                        <span class="need-value">75</span>
-                    </div>
-                    <div class="need">
-                        <span class="need-name">Diversificazione</span>
-                        <div class="need-bar-container">
-                            <div class="need-bar" data-value="90"></div>
-                        </div>
-                        <span class="need-value">90</span>
-                    </div>
-                    <div class="need">
-                        <span class="need-name">Reddito Costante</span>
-                        <div class="need-bar-container">
-                            <div class="need-bar" data-value="60"></div>
-                        </div>
-                        <span class="need-value">60</span>
-                    </div>
-                </div>
-            </section>
 
-            <section class="value-for-money-card">
-                <h2>Value for Money</h2>
-                <div class="vfm-index">
-                    <div class="vfm-bar-container">
-                        <div class="vfm-bar" data-value="75"></div>
+            <div class="cards-container">
+                <section class="top-needs-card">
+                    <h2>Top Bisogni</h2>
+                    <div class="needs-list">
+                        <div class="need">
+                            <span class="need-name">Crescita del Capitale</span>
+                            <div class="need-bar-container">
+                                <div class="need-bar" data-value="75"></div>
+                            </div>
+                            <span class="need-value">75</span>
+                        </div>
+                        <div class="need">
+                            <span class="need-name">Diversificazione</span>
+                            <div class="need-bar-container">
+                                <div class="need-bar" data-value="90"></div>
+                            </div>
+                            <span class="need-value">90</span>
+                        </div>
+                        <div class="need">
+                            <span class="need-name">Reddito Costante</span>
+                            <div class="need-bar-container">
+                                <div class="need-bar" data-value="60"></div>
+                            </div>
+                            <span class="need-value">60</span>
+                        </div>
                     </div>
-                    <span class="vfm-value">75</span>
-                </div>
-                <div class="vfm-attributes">
-                    <div class="vfm-attribute">
-                        <span class="attribute-name">Costi (Total Expense Ratio)</span>
-                        <span class="attribute-value">1.5%</span>
-                    </div>
-                    <div class="vfm-attribute">
-                        <span class="attribute-name">Performance storica</span>
-                        <span class="attribute-value">+8.2% annuo</span>
-                    </div>
-                    <div class="vfm-attribute">
-                        <span class="attribute-name">Performance attesa</span>
-                        <span class="attribute-value">+6.5% annuo</span>
-                    </div>
-                    <div class="vfm-attribute">
-                        <span class="attribute-name">Rarità</span>
-                        <span class="attribute-value">Alta</span>
-                    </div>
-                </div>
-            </section>
-        </div>
+                </section>
 
-            <section class="expected-performance-index">
-    <h2>Indice Performance attesa</h2>
-    <div class="performance-index">
-        <div class="performance-bar-container">
-            <div class="performance-bar" data-value="75"></div>
-        </div>
-        <span class="performance-value">75</span>
-    </div>
-    <div class="performance-details">
-        <div class="performance-detail">
-            <span class="detail-label">Performance +1 Y:</span>
-            <span class="detail-value">-48%</span>
-        </div>
-        <div class="performance-detail">
-            <span class="detail-label">Performance +3 Y:</span>
-            <span class="detail-value">-15%</span>
-        </div>
-        <div class="performance-detail">
-            <span class="detail-label">Performance +5 Y:</span>
-            <span class="detail-value">+8%</span>
-        </div>
-    </div>
-</section>
+                <section class="value-for-money-card">
+                    <h2>Value for Money</h2>
+                    <div class="vfm-index">
+                        <div class="vfm-bar-container">
+                            <div class="vfm-bar" data-value="75"></div>
+                        </div>
+                        <span class="vfm-value">75</span>
+                    </div>
+                    <div class="vfm-attributes">
+                        <div class="vfm-attribute">
+                            <span class="attribute-name">Costi (Total Expense Ratio)</span>
+                            <span class="attribute-value">1.5%</span>
+                        </div>
+                        <div class="vfm-attribute">
+                            <span class="attribute-name">Performance storica</span>
+                            <span class="attribute-value">+8.2% annuo</span>
+                        </div>
+                        <div class="vfm-attribute">
+                            <span class="attribute-name">Performance attesa</span>
+                            <span class="attribute-value">+6.5% annuo</span>
+                        </div>
+                        <div class="vfm-attribute">
+                            <span class="attribute-name">Rarità</span>
+                            <span class="attribute-value">Alta</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="schede-performance">
+                <section class="indice-performance-attesa">
+                    <h2>Indice Performance attesa</h2>
+                    <div class="indice-performance">
+                        <div class="contenitore-barra-performance">
+                            <div class="barra-performance" data-valore="75"></div>
+                        </div>
+                        <span class="valore-performance">75</span>
+                    </div>
+                    <div class="dettagli-performance">
+                        <div class="dettaglio-performance">
+                            <span class="etichetta-dettaglio">Performance +1 A:</span>
+                            <span class="valore-dettaglio">-48%</span>
+                        </div>
+                        <div class="dettaglio-performance">
+                            <span class="etichetta-dettaglio">Performance +3 A:</span>
+                            <span class="valore-dettaglio">-15%</span>
+                        </div>
+                        <div class="dettaglio-performance">
+                            <span class="etichetta-dettaglio">Performance +5 A:</span>
+                            <span class="valore-dettaglio">+8%</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="indice-performance-storica">
+                    <h2>Indice Performance storica</h2>
+                    <div class="indice-performance">
+                        <div class="contenitore-barra-performance">
+                            <div class="barra-performance" data-valore="80"></div>
+                        </div>
+                        <span class="valore-performance">80</span>
+                    </div>
+                    <div class="dettagli-performance">
+                        <div class="dettaglio-performance">
+                            <span class="etichetta-dettaglio">Performance -1 A:</span>
+                            <span class="valore-dettaglio">+10%</span>
+                        </div>
+                        <div class="dettaglio-performance">
+                            <span class="etichetta-dettaglio">Performance -3 A:</span>
+                            <span class="valore-dettaglio">+25%</span>
+                        </div>
+                        <div class="dettaglio-performance">
+                            <span class="etichetta-dettaglio">Performance -5 A:</span>
+                            <span class="valore-dettaglio">+40%</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
 
             <section class="key-statistics">
                 <div class="statistic">
@@ -144,7 +170,6 @@
                     </div>
                 </div>
             </section>
-
         </div>
     </main>
 
@@ -163,11 +188,12 @@
                 <p>Indirizzo: Via Roma 123, 00100 Roma, Italia</p>
             </div>
             <div class="social">
-                <!-- Aggiungi qui le icone dei social media -->
+                <!-- Aggiungi qui i link ai social media -->
             </div>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>
