@@ -179,8 +179,6 @@ main {
     }
 }
 
-
-
 .key-statistics {
     display: flex;
     justify-content: space-between;
@@ -208,7 +206,6 @@ main {
     height: 300px; /* Altezza fissa per il contenitore del grafico */
     width: 100%;
 }
-
 
 canvas {
     width: 100% !important;
@@ -362,3 +359,72 @@ footer nav ul li a {
         grid-template-columns: 1fr;
     }
 }
+
+/* Nuovi stili per Indice Performance attesa */
+.expected-performance-index {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 2em;
+    margin-bottom: 2em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.expected-performance-index h2 {
+    color: var(--primary-color);
+    margin-bottom: 1em;
+}
+
+.performance-index {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 1.5em;
+}
+
+.performance-bar-container {
+    flex-grow: 1;
+    height: 20px;
+    background-color: var(--light-gray);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.performance-bar {
+    height: 100%;
+    background-color: var(--primary-color);
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.performance-value {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--primary-color);
+
+}
+
+.performance-value {
+        font-size: 1.5em;
+        font-weight: 600;
+        color: var(--primary-color);
+    }
+    
+    .performance-details {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8em;
+    }
+    
+    .performance-detail {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .detail-label {
+        font-weight: 600;
+    }
+    
+    .detail-value {
+        color: var(--primary-color);
+    }

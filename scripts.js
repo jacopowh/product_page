@@ -133,4 +133,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Aggiungi l'event listener per lo scroll
     window.addEventListener('scroll', handleScroll);
+
+    // Animazione barra performance attesa
+    function animatePerformanceBar() {
+        const performanceBar = document.querySelector('.performance-bar');
+        const value = performanceBar.getAttribute('data-value');
+        setTimeout(() => {
+            performanceBar.style.width = `${value}%`;
+        }, 100);
+    }
+
+    // Inizializza l'animazione della barra di performance attesa
+    animatePerformanceBar();
 });
