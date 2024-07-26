@@ -353,3 +353,37 @@ footer nav ul li a {
         grid-template-columns: 1fr;
     }
 }
+
+.indici-aggiuntivi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    margin-bottom: 2em;
+}
+
+.indice-popolarita,
+.indice-esg {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 2em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(50% - 1em);
+    min-width: 250px;
+}
+
+.indice-popolarita h2,
+.indice-esg h2 {
+    color: var(--colore-primario);
+    margin-bottom: 1em;
+}
+
+@media (max-width: 768px) {
+    .indici-aggiuntivi {
+        flex-direction: column;
+    }
+
+    .indice-popolarita,
+    .indice-esg {
+        flex: 1 1 100%;
+    }
+}

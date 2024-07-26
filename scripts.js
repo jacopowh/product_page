@@ -128,6 +128,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+// Animazione allo scroll
+    function gestisciScroll() {
+        const schedePerformance = document.querySelector('.schede-performance');
+        if (isInViewport(schedePerformance)) {
+        animaBarrePerformance();
+        window.removeEventListener('scroll', gestisciScroll);
+        }
+    }
+
     // Inizializza l'animazione delle barre
     animateBars();
 
