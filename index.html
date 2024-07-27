@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fondo XYZ</title>
+    <title>Fondo XYZ - Dettagli Prodotto</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
@@ -12,10 +14,10 @@
             <div class="logo">Logo</div>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Prodotti</a></li>
-                    <li><a href="#">Contatti</a></li>
-                    <li><a href="#" class="btn-login">Login</a></li>
+                    <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-box"></i> Prodotti</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> Contatti</a></li>
+                    <li><a href="#" class="btn-login"><i class="fas fa-sign-in-alt"></i> Login</a></li>
                 </ul>
             </nav>
         </div>
@@ -24,7 +26,7 @@
     <main>
         <div class="container">
             <section class="product-info">
-                <h1>Fondo XYZ</h1>
+                <h1><i class="fas fa-chart-pie"></i> Fondo XYZ</h1>
                 <div class="product-details">
                     <div class="detail">
                         <span class="label">Codice Unico:</span>
@@ -51,7 +53,7 @@
 
             <div class="cards-container">
                 <section class="top-needs-card">
-                    <h2>Top Bisogni</h2>
+                    <h2><i class="fas fa-list-ol"></i> Top Bisogni</h2>
                     <div class="needs-list">
                         <div class="need">
                             <span class="need-name">Crescita del Capitale</span>
@@ -78,7 +80,7 @@
                 </section>
 
                 <section class="value-for-money-card">
-                    <h2>Value for Money</h2>
+                    <h2><i class="fas fa-money-bill-wave"></i> Value for Money</h2>
                     <div class="vfm-index">
                         <div class="vfm-bar-container">
                             <div class="vfm-bar" data-value="75"></div>
@@ -108,12 +110,12 @@
 
             <div class="schede-performance">
                 <section class="indice-performance-attesa">
-                    <h2>Indice Performance attesa</h2>
-                    <div class="indice-performance">
-                        <div class="contenitore-barra-performance">
-                            <div class="barra-performance" data-valore="75"></div>
+                    <h2><i class="fas fa-chart-line"></i> Indice Performance attesa</h2>
+                    <div class="indice-performance" aria-label="Indice di performance attesa">
+                        <div class="contenitore-barra-performance" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                            <div class="barra-performance" style="width: 75%"></div>
                         </div>
-                        <span class="valore-performance">75</span>
+                        <span class="valore-performance" aria-hidden="true">75</span>
                     </div>
                     <div class="dettagli-performance">
                         <div class="dettaglio-performance">
@@ -132,12 +134,12 @@
                 </section>
 
                 <section class="indice-performance-storica">
-                    <h2>Indice Performance storica</h2>
-                    <div class="indice-performance">
-                        <div class="contenitore-barra-performance">
-                            <div class="barra-performance" data-valore="80"></div>
+                    <h2><i class="fas fa-history"></i> Indice Performance storica</h2>
+                    <div class="indice-performance" aria-label="Indice di performance storica">
+                        <div class="contenitore-barra-performance" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                            <div class="barra-performance" style="width: 80%"></div>
                         </div>
-                        <span class="valore-performance">80</span>
+                        <span class="valore-performance" aria-hidden="true">80</span>
                     </div>
                     <div class="dettagli-performance">
                         <div class="dettaglio-performance">
@@ -158,12 +160,12 @@
 
             <div class="indici-aggiuntivi">
                 <section class="indice-popolarita">
-                    <h2>Indice Popolarità</h2>
-                    <div class="indice-performance">
-                        <div class="contenitore-barra-performance">
-                            <div class="barra-performance" data-valore="65"></div>
+                    <h2><i class="fas fa-star"></i> Indice Popolarità</h2>
+                    <div class="indice-performance" aria-label="Indice di popolarità">
+                        <div class="contenitore-barra-performance" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                            <div class="barra-performance" style="width: 65%"></div>
                         </div>
-                        <span class="valore-performance">65</span>
+                        <span class="valore-performance" aria-hidden="true">65</span>
                     </div>
                     <div class="dettagli-performance">
                         <div class="dettaglio-performance">
@@ -182,12 +184,12 @@
                 </section>
 
                 <section class="indice-esg">
-                    <h2>Indice ESG</h2>
-                    <div class="indice-performance">
-                        <div class="contenitore-barra-performance">
-                            <div class="barra-performance" data-valore="80"></div>
+                    <h2><i class="fas fa-leaf"></i> Indice ESG</h2>
+                    <div class="indice-performance" aria-label="Indice ESG">
+                        <div class="contenitore-barra-performance" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                            <div class="barra-performance" style="width: 80%"></div>
                         </div>
-                        <span class="valore-performance">80</span>
+                        <span class="valore-performance" aria-hidden="true">80</span>
                     </div>
                     <div class="dettagli-performance">
                         <div class="dettaglio-performance">
@@ -208,13 +210,13 @@
 
             <section class="key-statistics">
                 <div class="statistic">
-                    <h2>Indice di Costo Sintetico</h2>
+                    <h2><i class="fas fa-chart-bar"></i> Indice di Costo Sintetico</h2>
                     <div class="chart-container">
                         <canvas id="cost_chart"></canvas>
                     </div>
                 </div>
                 <div class="statistic">
-                    <h2>Indice di Rischio Sintetico</h2>
+                    <h2><i class="fas fa-chart-area"></i> Indice di Rischio Sintetico</h2>
                     <div class="chart-container">
                         <canvas id="risk_chart"></canvas>
                     </div>
@@ -238,12 +240,13 @@
                 <p>Indirizzo: Via Roma 123, 00100 Roma, Italia</p>
             </div>
             <div class="social">
-                <!-- Aggiungi qui i tuoi link ai social media -->
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>

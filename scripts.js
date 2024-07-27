@@ -19,6 +19,66 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
+    new Chart(riskCtx, {
+        type: 'radar',
+        data: {
+            labels: ['Stress', 'Sfavorevole', 'Neutrale', 'Favorevole'],
+            datasets: [{
+                label: 'Indice di Rischio',
+                data: [2, 4, 6, 8],
+                backgroundColor: 'rgba(0, 180, 216, 0.2)',
+                borderColor: 'rgba(0, 180, 216, 1)',
+                borderWidth: 1,
+                pointBackgroundColor: 'rgba(0, 180, 216, 1)'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Indice di Rischio Sintetico',
+                    font: {
+                        size: 16
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            let label = context.dataset.label || '';
+                            if (label) {
+                                label += ': ';
+                            }
+                            if (context.parsed.r !== null) {
+                                label += context.parsed.r + '/10';
+                            }
+                            return label;
+                        }
+                    }
+                }
+            },
+            scales: {
+                r: {
+                    beginAtZero: true,
+                    suggestedMax: 10,
+                    ticks: {
+                        stepSize: 2
+                    }
+                }
+            },
+            elements: {
+                point: {
+                    radius: 4,
+                    hoverRadius: 6
+                }
+            }
+        }
+    });
+
     new Chart(costCtx, {
         type: 'bar',
         data: {
@@ -52,39 +112,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    new Chart(riskCtx, {
-        type: 'radar',
-        data: {
-            labels: ['Stress', 'Sfavorevole', 'Neutrale', 'Favorevole'],
-            datasets: [{
-                label: 'Indice di Rischio',
-                data: [2, 4, 6, 8],
-                backgroundColor: 'rgba(0, 180, 216, 0.2)',
-                borderColor: 'rgba(0, 180, 216, 1)',
-                borderWidth: 1,
-                pointBackgroundColor: 'rgba(0, 180, 216, 1)'
-            }]
-        },
-        options: {
-            ...commonOptions,
-            plugins: {
-                ...commonOptions.plugins,
-                title: {
-                    ...commonOptions.plugins.title,
-                    text: 'Indice di Rischio Sintetico'
-                }
-            },
-            scales: {
-                r: {
-                    beginAtZero: true,
-                    suggestedMax: 10,
-                    ticks: {
-                        stepSize: 2
-                    }
-                }
-            }
-        }
-    });
 
     // Animazione delle barre dei bisogni
     function animateNeedBars() {

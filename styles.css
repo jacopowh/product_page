@@ -106,25 +106,40 @@ main {
     color: var(--colore-testo);
 }
 
-.cards-container {
-    display: flex;
-    gap: 2em;
-    margin-bottom: 2em;
-}
-
-.top-needs-card,
-.value-for-money-card {
+.card {
     background-color: #ffffff;
     border-radius: 8px;
     padding: 2em;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    flex: 1;
+    transition: box-shadow 0.3s ease;
 }
 
-.top-needs-card h2,
-.value-for-money-card h2 {
+.card:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
     color: var(--colore-primario);
     margin-bottom: 1em;
+    font-size: 1.5em;
+}
+
+.top-needs-card,
+.value-for-money-card,
+.indice-performance-attesa,
+.indice-performance-storica,
+.indice-popolarita,
+.indice-esg {
+    @extend .card;
+}
+
+.cards-container,
+.schede-performance,
+.indici-aggiuntivi {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+    margin-bottom: 2em;
 }
 
 .needs-list {
@@ -195,27 +210,6 @@ main {
     color: var(--colore-primario);
 }
 
-.schede-performance {
-    display: flex;
-    gap: 2em;
-    margin-bottom: 2em;
-}
-
-.indice-performance-attesa,
-.indice-performance-storica {
-    background-color: #ffffff;
-    border-radius: 8px;
-    padding: 2em;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    flex: 1;
-}
-
-.indice-performance-attesa h2,
-.indice-performance-storica h2 {
-    color: var(--colore-primario);
-    margin-bottom: 1em;
-}
-
 .indice-performance {
     display: flex;
     align-items: center;
@@ -258,10 +252,11 @@ main {
 
 .etichetta-dettaglio {
     font-weight: 600;
+    color: #333; /* Colore più scuro per un maggiore contrasto */
 }
 
 .valore-dettaglio {
-    color: var(--colore-primario);
+    color: #0056b3; /* Blu più scuro per un maggiore contrasto */
 }
 
 .key-statistics {
@@ -325,11 +320,17 @@ footer nav ul li a {
     text-align: center;
 }
 
+.fas {
+    margin-right: 0.5em;
+    color: var(--colore-secondario);
+}
+
 @media (max-width: 768px) {
     .cards-container,
     .schede-performance,
+    .indici-aggiuntivi,
     .key-statistics {
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 
     .need {
@@ -351,39 +352,5 @@ footer nav ul li a {
 
     .product-details {
         grid-template-columns: 1fr;
-    }
-}
-
-.indici-aggiuntivi {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2em;
-    margin-bottom: 2em;
-}
-
-.indice-popolarita,
-.indice-esg {
-    background-color: #ffffff;
-    border-radius: 8px;
-    padding: 2em;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    flex: 1 1 calc(50% - 1em);
-    min-width: 250px;
-}
-
-.indice-popolarita h2,
-.indice-esg h2 {
-    color: var(--colore-primario);
-    margin-bottom: 1em;
-}
-
-@media (max-width: 768px) {
-    .indici-aggiuntivi {
-        flex-direction: column;
-    }
-
-    .indice-popolarita,
-    .indice-esg {
-        flex: 1 1 100%;
     }
 }
